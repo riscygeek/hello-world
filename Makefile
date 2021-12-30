@@ -12,7 +12,7 @@ clean:
 	rm -f helloworld
 
 install: helloworld
-	install -Dm755 $@ $(DESTDIR)$(prefix)/bin/helloworld
+	install -Dm755 $< $(DESTDIR)$(prefix)/bin/helloworld
 
 .PHONY: all clean install
 
