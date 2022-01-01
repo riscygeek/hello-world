@@ -3,16 +3,16 @@ CC ?= cc
 CFLAGS ?= -O2 -Wall -Wextra
 prefix ?= /usr
 
-all: helloworld
+all: hello-world
 
-helloworld: hello.c
+hello-world: hello.c
 	$(CC) -o $@ $< $(CFLAGS)
 
 clean:
-	rm -f helloworld
+	rm -f hello-world
 
-install: helloworld
-	install -Dm755 $< $(DESTDIR)$(prefix)/bin/helloworld
+install: hello-world
+	install -Dm755 $< $(DESTDIR)$(prefix)/bin/hello-world
 
 .PHONY: all clean install
 
